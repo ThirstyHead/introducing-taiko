@@ -1,0 +1,26 @@
+{
+  "name": "introducing-taiko",
+  "version": "0.1.0",
+  "description": "[PRESENTATION] Introducing Taiko: Driving Your Web Browser Programmatically", 
+  "author": "Scott Davis <scott.davis@thoughtworks.com>",
+  "license": "CC-BY-4.0",
+  "main": "index.html",
+  "scripts": {
+    "addlang": "node utils/addlang.js",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThirstyHead/introducing-taiko.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ThirstyHead/introducing-taiko/issues"
+  },
+  "homepage": "https://github.com/ThirstyHead/introducing-taiko#readme",
+  "devDependencies": {
+    "fs-extra": "^7.0.1",
+    "talk-o-vision": "github:thirstyhead/talk-o-vision"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Introducing Taiko</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Scott Davis <scott.davis@thoughtworks.com>">
+    <meta name="description" content="Introducing Taiko">
+    <meta name="keywords"
+          content="ThoughtWorks, Taiko, testing, browser automation, JavaScript, Chrome DevTools Protocol">
+    <link rel="shortcut icon" href="favicon.ico" />
+
+
+    <style>
+      a{
+        color: white;
+        text-decoration: none;
+      }
+
+      a:hover{
+        color: red;
+        text-decoration: underline;
+      }
+
+      body{
+        background-color: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+        padding: 1em;
+
+      }
+
+      h1{
+        font-family: "Times New Roman", Times, serif;
+        font-size: 2em;
+      }
+
+      h2{
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      img{
+        float: left;
+        width: 33%;
+        clip-path: circle();
+        shape-outside: circle();  
+      }
+      
+    </style>    
+  </head>
+
+  <body>
+    <article>
+      <h1>Introducing Taiko: Driving Your Web Browser Programmatically</h1> 
+    <img src="taiko-drummer.jpg" alt="">
+    <p>
+    As a web programmer, I've always wanted to drive my web browser programmatically -- open this page, fill in that field, click on that button over there; all driven by JavaScript instead of a pesky human. Past solutions were flaky at best, because they were third-party, aftermarket attempts to add functionality to a browser that didn't support it natively. Modern browsers now offer this level of programmatic instrumentation baked-in. All we have to do is start using it. 
+    </p>
+
+    <p>
+In this talk, Scott Davis (Principal Engineer, ThoughtWorks) introduces you to Taiko -- a free and open source browser automation tool written in JavaScript. You'll learn how to install and open the NodeJS-based Taiko REPL, allowing you to start exploring the simple, expressive API right away. Next, you'll save your REPL session as a JavaScript file that can be run directly from the command line (or your test suite, or your CI/CD pipeline). Finally, you'll see how to intercept requests for testing purposes -- either by blocking them completely, modifying the results as they come in, or swapping out the results with your own mock data.  
+    </p>
+
+    <p>
+Taiko uses the same Chrome DevTools Protocol that you use when you open up the Developer Console in Chrome, run a Lighthouse Audit, or use the Puppeteer API, so you know that it's stable. Taiko ships with its own known-good version of embedded Chromium, eliminating integration and version-mismatch issues. Whether you pair Taiko with Gauge for User Journey Testing or use it alone to drive your web browser programmatically, Taiko is a powerful new tool for the serious web developer's toolkit. 
+    </p>
+
+
+
+<h2>View Slideshow</h2>
+<ul>
+  <li><a href="slides/en-us/index-src.html">English (en-us)</a></li>
+</ul>
+
+  </article>
+  </body>
+</html>
