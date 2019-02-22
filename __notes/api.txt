@@ -1,0 +1,20 @@
+Browser actions
+    openBrowser, closeBrowser, client, switchTo, setViewPort, openTab, closeTab
+
+Page actions
+    goto, reload, title, click, doubleClick, rightClick, dragAndDrop, hover, focus, write, clear, attach, press, highlight, scrollTo, scrollRight, scrollLeft, scrollUp, scrollDown, screenshot
+
+Selectors
+    $, image, link, listItem, button, inputField, fileField, textField, comboBox, checkBox, radioButton, text, contains
+
+Proximity selectors
+    toLeftOf, toRightOf, above, below, near
+
+Events
+    alert, prompt, confirm, beforeunload, intercept
+
+Helpers
+    evaluate, intervalSecs, timeoutSecs, to, into, waitFor, accept, dismiss
+
+Run `.api <name>` for more info on a specific function. For Example: `.api click`.
+Complete documentation is available at http://taiko.gauge.org.
