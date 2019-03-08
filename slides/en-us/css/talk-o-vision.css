@@ -185,6 +185,13 @@ ul li{
   object-fit: contain;
 }
 
+.contain-half{
+  height: 45vh;
+  max-width: 95%;
+  object-fit: contain;
+}
+
+
 .display{
   display: block;
 }
@@ -205,6 +212,12 @@ ul li{
   /* NOTE: override background in index.html */
   /* background: url('slides/title/speech-bubble-inverted.png') no-repeat center center; */
   /* background-size: contain; */
+}
+
+.outline{
+  border: solid 1px black;
+  box-shadow: 10px 5px 5px #ccc;
+  border-radius: 10px;
 }
 
 .right{

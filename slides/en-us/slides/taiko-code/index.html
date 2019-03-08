@@ -1,0 +1,34 @@
+      <section class="theme-invert">
+        <h2 hidden aria-hidden="false">.code</h2>
+        <figure>
+          <pre><code>
+&gt; .code
+
+const { openBrowser, goto, 
+        click, closeBrowser } = require('taiko');
+(async () =&gt; {
+    try {
+        await openBrowser();
+        await goto('https://thirstyhead.com/groceryworks');
+        await click('Pasta');
+        await click('Penne');
+        await click('Produce');
+        await click('Eggplant');
+        await click('Purchase');
+    } catch (e) {
+        console.error(e);
+    } finally {
+        await closeBrowser();
+    }
+})();
+          </code></pre>  
+
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>

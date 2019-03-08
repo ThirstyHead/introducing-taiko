@@ -1,0 +1,32 @@
+      <section class="theme-invert">
+        <h2 hidden aria-hidden="false">.api intercept (cont.)</h2>
+        <figure>
+          <pre><code>
+&gt; .api intercept
+
+Add interceptor for the network call to override request 
+    or mock response.
+
+Example:
+  case 1: block url =&gt; intercept(url)
+  case 2: mockResponse =&gt; intercept(url,{mockObject})
+  case 3: override request =&gt; 
+    intercept(url,(request) =&gt; {
+      request.continue({overrideObject})
+    })
+  case 4: redirect =&gt; intercept(url,redirectUrl)
+  case 5: mockResponse based on request =&gt; 
+    intercept(url,(request) =&gt; { 
+      request.respond({mockResponseObject})
+    })
+          </code></pre>  
+
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
