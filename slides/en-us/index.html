@@ -1,0 +1,722 @@
+<html lang="en"><head>
+    <title>Introducing Taiko</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1,
+                                   user-scalable=yes">
+    <meta name="author" content="Scott Davis <scott.davis@thoughtworks.com>">
+    <meta name="description" content="Introducing Taiko">
+    <meta name="keywords" content="ThoughtWorks, Taiko, testing, browser automation, JavaScript, Chrome DevTools Protocol, WebDriver, Selenium">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/talk-o-vision.css">
+
+    <style>
+      .main-title{
+        background: url('slides/title/taiko-drummer.jpg') no-repeat center center;
+        background-size: contain;
+      }
+
+      .banner{
+        background-color: var(--theme-foreground-color);
+        opacity: 0.6;
+        top: 5vh;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 hidden="" aria-hidden="false">Introducing Taiko</h1>
+    <main class="slideshow">
+      <section class="main-title" id="1" data-src="slides/title">
+        <h2 hidden="" aria-hidden="false">Introducing Taiko</h2>
+        <audio src="slides/title/audio.mp3"></audio>
+        <figure>
+          <div class="banner">
+            Introducing Taiko
+            <div class="subtitle">
+              Driving Your Web Browser Programmatically 
+            </div>
+            <div class="bio">
+              <br>
+              Scott Davis<br>
+              <a href="mailto:scott.davis@thoughtworks.com">scott.davis@thoughtworks.com</a><br>
+              <a href="https://twitter.com/scottdavis99">@scottdavis99</a>
+            </div>
+          </div>
+          <figcaption>
+            <p>
+              Introducing Taiko, a free and open source browser automation tool for driving your web browser programmatically.  
+            </p>
+            <p>
+              Presented by Scott Davis. His email address is
+              scott.davis@thoughtworks.com. His Twitter handle is @scottdavis99.
+            </p>
+          </figcaption>
+        </figure>
+      </section>
+      <!-- <section data-src="slides/instructions"></section> -->
+      <section class="theme-invert" id="2" data-src="slides/bio">
+        <h2 hidden="" aria-hidden="false">Biography</h2>
+        <audio src="slides/bio/audio.mp3"></audio>
+        <figure>
+          <img src="slides/bio/scott-davis-bio.png" alt="Scott Davis' Biography" class="contain">
+
+          <figcaption>
+           <p>Hi! My name is Scott Davis. I'm currently a Principle Engineer
+             with ThoughtWorks. Before that, I ran a software consultancy out
+             of Denver, Colorado called ThirstyHead. </p>
+
+           <p>I've been writing about web development for years -- articles
+             for IBM, books for O'Reilly and the Pragmatic Bookshelf, and most
+             recently videos for O'Reilly as well.</p>
+          </figcaption>
+        </figure>
+      </section>
+      <section id="3" data-src="slides/taiko">
+        <h2 aria-hidden="false"><a href="https://taiko.gauge.org/">https://taiko.gauge.org</a></h2>
+        <audio src="slides/taiko/audio.mp3"></audio>
+        <figure>
+          <a href="https://taiko.gauge.org">
+          <img src="slides/taiko/taiko-home.png" alt="Taiko Homepage" class="contain-with-header" data-src="https://taiko.gauge.org/">
+          </a>
+
+          <figcaption>
+            <p>
+Today I'd like to talk to you about Taiko -- a free and open source browser automation tool built by ThoughtWorks. So, what exactly is a browser automation tool?            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="4" data-src="slides/driver">
+        <h2 hidden="" aria-hidden="false">Driver</h2>
+        <audio src="slides/driver/audio.mp3"></audio>
+        <figure>
+          <img src="slides/driver/driver.jpg" alt="Driver of a car" class="contain" data-src="https://pxhere.com/en/photo/1170413">
+
+          <figcaption>
+            <p>
+            "Browser automation tools" are much like the "driver automation tools" you can find in modern automobiles today. </p>
+
+            <p>
+Cruise control is a "driver automation tool" that keeps your car driving at a constant speed. On newer cars, cruise control can slow you down, or even stop so that you don't get in an accident.        
+            </p>
+
+            <p>
+More advanced cars can parallel park on your behalf, or even be "summonsed" with a simple click of your key fob. They'll back out of a tight parking spot, or back out of your garage, and autonomously drive to where you are. 
+            </p>
+          </figcaption>
+        </figure>
+      </section>
+      <section id="5" data-src="slides/w3c-webdriver">
+        <h2 hidden="" aria-hidden="false">W3C WebDriver</h2>
+        <audio src="slides/w3c-webdriver/audio.mp3"></audio>
+        <figure>
+          <a href="https://www.w3.org/TR/webdriver1/">
+          <img src="slides/w3c-webdriver/w3c-webdriver.png" alt="W3C WebDriver" class="contain" data-src="https://www.w3.org/TR/webdriver1/">
+          </a>
+
+          <figcaption>
+            <p>
+       This is what's so exciting about the idea of "browser automation tools". WebDriver is a W3C standard that will soon be baked into every modern browser. 
+            </p>
+            <p>
+       WebDriver allows you to remotely control your browser from a script -- visiting new web pages, filling in form fields, clicking on buttons, and so on.      
+            </p>
+            <p>
+Automated testing is an obvious use of this. Testing the behavior of your web app in an actual browser couldn't be easier. But it's not limited to simple testing -- you can grab screenshots at any step along the way, do sophisticated analytics like calculating download speeds and measuring time-to-interactive, and even verify how accessible your website is to folks with disabilities like low vision or lack of fine motor skills.  
+            </p>
+            <p>
+And notice the lead editor on this spec: Simon Stewart. As it turns out, Simon is a former ThoughtWorker who has been working on this kind of browser automation for over a decade. 
+            </p>
+          </figcaption>
+        </figure>
+      </section>
+      <!-- <section data-src="slides/cruisecontrol"></section> -->
+      <!-- <section data-src="slides/gocd"></section> -->
+      <!-- <section data-src="slides/selenium"></section> -->
+      <section id="6" data-src="slides/selenium-history">
+        <h2 hidden="" aria-hidden="false">Selenium History</h2>
+        <audio src="slides/selenium-history/audio.mp3"></audio>
+        <figure>
+          <a href="https://en.wikipedia.org/wiki/Selenium_(software)">
+          <img src="slides/selenium-history/selenium-history-timeline.png" alt="Selenium History" class="contain" data-src="https://en.wikipedia.org/wiki/Selenium_(software)#Selenium_WebDriver">
+          </a>
+
+          <figcaption>
+            <p>
+      As a matter of fact, ThoughtWorks has been actively working on browser automation tools for over 15 years at this point.       
+            </p>
+            <p>
+You might be familiar with "Selenium", a free and open source browser automation tool that we released way back in 2004. 
+            </p>
+            <p>
+Simon Stewart released a free and open source tool called "WebDriver" back in 2007, and the two projects merged in 2009. 
+            </p>
+            
+
+          </figcaption>
+        </figure>
+      </section>
+      <!-- <section data-src="slides/selenium-webdriver"></section> -->
+      <section id="7" data-src="slides/taiko-2">
+        <h2 aria-hidden="false"><a href="https://taiko.gauge.org/">https://taiko.gauge.org</a></h2>
+        <audio src="slides/taiko-2/audio.mp3"></audio>
+        <figure>
+          <a href="https://taiko.gauge.org">
+          <img src="slides/taiko-2/taiko-home.png" alt="Taiko Homepage" class="contain-with-header" data-src="https://taiko.gauge.org/">
+          </a>
+
+          <figcaption>
+            <p>
+      So, Taiko is the latest in a long history of browser automation tools release by ThoughtWorks, going back over 15 years.      
+            </p>
+
+            <p>
+Where Taiko really shines is stability and ease of use. You're a quick 'npm install' away from a getting a stable, reliable browser automation tool installed on your developer machine or added to your Continuous Delivery pipeline. 
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <!-- <section data-src="slides/chrome-webdriver"></section> -->
+      <section id="8" data-src="slides/chromium">
+        <h2 aria-hidden="false">Taiko includes Chromium</h2>
+        <audio src="slides/chromium/audio.mp3"></audio>
+        <figure>
+          <a href="https://en.wikipedia.org/wiki/Chromium_(web_browser)">
+          <img src="slides/chromium/chromium.png" alt="Chromium" class="contain-with-header" data-src="https://en.wikipedia.org/wiki/Chromium_(web_browser)">
+          </a>
+
+          <figcaption>
+            <p>
+      What makes Taiko so stable is that it ships with a known-good, compatible, working release of Chromium when you 'npm install' it.       
+            </p>
+
+            <p>
+And what is Chromium? Well, outside of software, it's the element used to make the chrome features on your car. In the web development world, it's the free and open source core that Google uses to make their Chrome browser. (Clever, eh?)
+            </p>
+
+            <p>
+But Chromium is also at the core of the Opera browser. And in a recent, unexpected move, Microsoft abandoned nearly 30 years of building their own web technologies to make Chromium the core of their Microsoft Edge browser.
+            </p>
+
+            <p>
+So while there are still healthy competitors to Chromium in the open source ecosystem -- Firefox uses a core called Gecko, and Apple's Safari uses a core called WebKit -- Chromium is a popular, well-supported foundation to many popular web browsers that you and your users are most likely already using.
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="9" data-src="slides/chrome-devtools-protocol">
+        <h2 hidden="" aria-hidden="false">Chrome DevTools Protocol</h2>
+        <audio src="slides/chrome-devtools-protocol/audio.mp3"></audio>
+        <figure>
+          <img src="slides/chrome-devtools-protocol/chrome-devtools-protocol.png" alt="Chrome DevTools Protocol" class="contain" data-src="">
+
+          <figcaption>
+            <p>
+      Since the new WebDriver W3C standard isn't fully implemented across all browsers today, Taiko uses the next best thing: the Chrome DevTools Protocol.       
+            </p>
+            <p>
+As you might've guessed from the name, this is the same stable low-level protocol that the Chrome Developer Tools use to interact with the browser, like the JavaScript console. If you've ever run a Lighthouse Audit on your website, Lighthouse uses the Chrome DevTools Protocol to pull performance metrics and accessibility results to build out its detailed analytics reports.  
+            </p>
+            <p>
+Taiko has access to all of the same data and browser automation capabilities that these familiar development tools have. And now you do, too, in an easy scriptable environment.  
+            </p>
+
+
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="section-title" id="10" data-src="slides/title-using-taiko">
+        <h2 aria-hidden="false">Using <span class="highlight">Taiko</span></h2><h2>
+          <audio src="slides/title-using-taiko/audio.mp3"></audio>
+
+          <figcaption>
+            <p>
+      So, let's get started.      
+            </p>
+
+          </figcaption>
+        
+      </h2></section>
+      <section id="11" data-src="slides/groceryworks">
+        <h2 hidden="" aria-hidden="false">GroceryWorks</h2>
+        <audio src="slides/groceryworks/audio.mp3"></audio>
+        <figure>
+          <a href="https://thirstyhead.com/groceryworks">https://thirstyhead.com/grocery
+            works</a>
+          <a href="https://thirstyhead.com/groceryworks">
+          <img src="slides/groceryworks/groceryworks.png" alt="GroceryWorks" class="contain" data-src="https://thirstyhead.com/groceryworks">
+          </a>
+
+          <figcaption>
+            <p>So, here's a website for a fictional grocery store called GroceryWorks. As you click around, you'll see that tapping the categories on the left show you different types of food items -- beans, nuts, pasta, produce, and so on. Clicking on a food item adds it to the cart on the right. Clicking on the food item again removes it from the cart. Clicking 'Purchase' allows you to place your order or cancel it.
+            </p>
+          </figcaption>
+        </figure>
+      </section>
+      <section class="theme-invert" id="12" data-src="slides/taiko-repl">
+        <h2 aria-hidden="false">Taiko REPL</h2>
+        <audio src="slides/taiko-repl/audio.mp3"></audio>
+        <figure>
+          <pre><code>
+$ taiko
+
+
+Version: 0.5.0 (Chromium:73.0.3638.0)
+Type .api for help and .exit to quit
+
+&gt;
+          </code></pre>  
+
+
+          <figcaption>
+            <p>
+      If you've already installed Taiko, you can simply type 'taiko' at the command prompt. This will launch you into the interactive REPL where you can explore the features of Taiko at your own pace.      
+            </p>
+
+            <p>
+At this point, you are given two suggestions to type. One of these suggestions will make this a very short discussion. Why don't you type '.api' instead and see what other commands are available to you?
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section class="theme-invert" id="13" data-src="slides/taiko-api">
+        <h2 hidden="" aria-hidden="false">Taiko .api</h2>
+        <audio src="slides/taiko-api/audio.mp3"></audio>
+        <figure>
+          <pre><code>
+&gt; .api
+
+Browser actions
+    openBrowser, closeBrowser, client, switchTo, 
+    setViewPort, openTab, closeTab
+
+Page actions
+    goto, reload, title, click, doubleClick, rightClick
+
+[snip]
+
+Run `.api &lt;name&gt;` for more info on a specific function. 
+    For Example: `.api click`.
+Complete documentation is available at 
+    http://taiko.gauge.org.
+          </code></pre>  
+
+
+          <figcaption>
+            <p>
+           Typing '.api' brings up a list of all of the Taiko commands. 
+            </p>
+            <p>
+These should be fairly straight forward to understand. The 'openBrowser' and 'closeBrowser' commands do what you'd expect them to do. 'openTab', 'closeTab', 'click', 'doubleClick', 'rightClick' -- you get the idea.  
+            </p>
+            <p>
+But if you want to learn more about any of these specific commands, simply type '.api' and command name to pull up more information.
+            </p>
+          </figcaption>
+        </figure>
+      </section>
+      <section class="theme-invert" id="14" data-src="slides/taiko-openbrowser">
+        <h2 hidden="" aria-hidden="false">.api openBrowser</h2>
+        <audio src="slides/taiko-openbrowser/audio.mp3"></audio>
+        <figure>
+          <pre><code>
+&gt; .api openBrowser
+
+Launches a browser with a tab. The browser will be closed 
+    when the parent node.js process is closed.
+
+Example:
+	openBrowser()
+	openBrowser({ headless: false })
+	openBrowser({args:['--window-size=1440,900']})
+	openBrowser({args: [
+	      '--disable-gpu',
+	      '--disable-dev-shm-usage',
+	      '--disable-setuid-sandbox',
+	      '--no-first-run',
+	      '--no-sandbox',
+	      '--no-zygote']}) - These are recommended args 
+               that have to be passed when running in docker
+          </code></pre>  
+
+
+          <figcaption>
+            <p>
+For example, type '.api openBrowser'. Not surprisingly, this is how you open a new Chromium instance. But there are a number of flags that you can pass to control or customize your new Chromium instance.            
+            </p>
+            <p>
+When you're in the Taiko REPL, typing 'openBrowser' without any options will open a visible instance of Chromium so that you can see what you're doing. But if you're running Taiko as a part of your Continuous Delivery pipeline, you'll almost certainly want to run it in headless mode, which means nothing visible will be displayed. You can also control the size of the window, visible or not, to more closely emulate smartphone, tablet, or laptop users.
+            </p>
+            <p>
+All of these are standard, out-of-the-box, Chromium flags.
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section class="theme-invert" id="15" data-src="slides/taiko-openbrowser-2">
+        <h2 hidden="" aria-hidden="false">openBrowser (cont.)</h2>
+        <audio src="slides/taiko-openbrowser-2/audio.mp3"></audio>
+        <figure>
+          <pre><code>
+&gt; openBrowser()
+
+ ✔ Browser opened
+          </code></pre>  
+
+          <img src="slides/taiko-openbrowser-2/chromium-blank.png" alt="A blank Chromium window" class="contain-half outline">
+
+
+
+          <figcaption>
+            <p>
+      So, if you type 'openBrowser()' right now in your Taiko REPL, you should see a new instance of Chromium pop up with a blank tab, just waiting for you to do something interesting.       
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section class="theme-invert" id="16" data-src="slides/taiko-goto">
+        <h2 hidden="" aria-hidden="false">.api goto</h2>
+        <audio src="slides/taiko-goto/audio.mp3"></audio>
+        <figure>
+          <pre><code>
+&gt; .api goto
+
+Opens the specified URL in the browser's tab. Adds http 
+    protocol to the URL if not present.
+
+Example:
+	goto('https://google.com')
+	goto('google.com')
+          </code></pre>  
+
+
+          <figcaption>
+            <p>
+      For example, you could goto a website. If you type '.api goto', you'll see that you can either type in a fully qualified domain name, or any shortened version that you'd normally type into your web browser as an end user.      
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section class="theme-invert" id="17" data-src="slides/taiko-goto-2">
+        <h2 hidden="" aria-hidden="false">.api goto</h2>
+        <audio src="slides/taiko-goto-2/audio.mp3"></audio>
+        <figure>
+          <pre><code>
+&gt; goto('https://thirstyhead.com/groceryworks')
+
+ ✔ Navigated to url "https://thirstyhead.com/groceryworks" 
+          </code></pre>  
+
+          <img src="slides/taiko-goto-2/chromium-groceryworks.png" alt="Viewing the website for groceryworks" class="contain-half outline">
+
+          <figcaption>
+            <p>
+      So, if you type in "goto('https://thirstyhead.com/groceryworks"), you'll visit the GroceryWorks website that we talked about just a moment ago.      
+            </p>
+            <p>
+Of course, this works just as well visiting 'localhost' on your development machine, or visiting the URL of your staging environment, your test server, or even your production website. It's completely up to you.
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section class="theme-invert" id="18" data-src="slides/taiko-click">
+        <h2 hidden="" aria-hidden="false">.api click</h2>
+        <audio src="slides/taiko-click/audio.mp3"></audio>
+        <figure>
+          <pre><code>
+&gt; .api click
+
+Fetches an element with the given selector, scrolls it 
+   into view if needed, and then clicks in the center of 
+   the element. If there's no element matching selector, 
+   the method throws an error.
+
+Example:
+	click('Get Started')
+	click(link('Get Started')) 
+
+          </code></pre>  
+
+
+          <figcaption>
+            <p>
+      If you want to click on something onscreen, not surprisingly, you'll use the 'click' command. Type '.api click' to learn more about it.      
+            </p>
+
+            <p>
+One of the most powerful features of Taiko is its selector logic. Whatever you (or your end users) see on the screen, you can use here in conjunction with the 'click' command.  
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section class="theme-invert" id="19" data-src="slides/taiko-click-2">
+        <h2 hidden="" aria-hidden="false">.api click (cont.)</h2>
+        <audio src="slides/taiko-click-2/audio.mp3"></audio>
+        <figure>
+          <pre><code>
+&gt; click('Pasta')
+
+ ✔ Clicked element matching text "Pasta" 
+          </code></pre>  
+
+          <img src="slides/taiko-click-2/chromium-click-pasta.png" alt="Clicking on the Pasta menu item" class="contain-half outline">
+
+          <figcaption>
+            <p>
+      So, if you want to see what kind of Pasta you can add to your cart, simply type "click('Pasta')".       
+            </p>
+            <p>
+You don't have to worry about what the underlying class selector is, or ID selector, or anything like that. Use the text on the screen, which is exactly what your end user would do.
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section class="theme-invert" id="20" data-src="slides/taiko-click-3">
+        <h2 hidden="" aria-hidden="false">.api click (cont.)</h2>
+        <audio src="slides/taiko-click-3/audio.mp3"></audio>
+        <figure>
+          <pre><code>
+&gt; click('Penne')
+ ✔ Clicked element matching text "Penne"
+&gt; click('Produce')
+ ✔ Clicked element matching text "Produce"
+&gt; click('Eggplant')
+ ✔ Clicked element matching text "Eggplant"
+&gt; click('Purchase')
+ ✔ Clicked element matching text "Purchase" 
+          </code></pre>  
+
+          <img src="slides/taiko-click-3/chromium-click-purchase.png" alt="Clicking on the Purchase button" class="contain-half outline">
+
+          <figcaption>
+            <p>
+      So, if you type "click('Penne')", "click('Produce')", "click('Eggplant')", "click('Purchase')", you, in fact, are clicking on radio buttons, checkboxes, and an HTML button using the same text that your user sees on-screen.
+            </p>
+            <p>
+From here, you could type "click('Purchase Order')", or "click('Cancel')" to proceed.
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section class="theme-invert" id="21" data-src="slides/taiko-selectors">
+        <h2 hidden="" aria-hidden="false">.api selectors</h2>
+        <audio src="slides/taiko-selectors/audio.mp3"></audio>
+        <figure>
+          <pre><code>
+&gt; .api
+
+[snip]
+
+Selectors
+    $, image, link, listItem, button, inputField, 
+    fileField, textField, comboBox, checkBox, 
+    radioButton, text, contains
+
+Proximity selectors
+    toLeftOf, toRightOf, above, below, near
+
+[snip]
+
+Run `.api &lt;name&gt;` for more info on a specific function. 
+    For Example: `.api click`.
+Complete documentation is available at 
+    http://taiko.gauge.org.
+          </code></pre>  
+
+
+          <figcaption>
+            <p>
+      Of course, if you need to be more specific, you can be. You can say, "Click on the image", or "Click on the link", or "Click on the listItem". Click on the screen element "toLeftOf", "toRightOf", "above", or "below". You can even use the familiar "$" to use class selectors or ID selectors if that's the level of specificity you need.      
+            </p>
+            <p>
+But believe it or not, the less specific you can make your Taiko scripts, the more resilient they'll be in the face of change. When you change that link to a button, or that checkBox to a comboBox, or that class name yet again, you'll be happy that you used the on-screen text instead of the underlying implementation. 
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section class="theme-invert" id="22" data-src="slides/taiko-code">
+        <h2 hidden="" aria-hidden="false">.code</h2>
+        <audio src="slides/taiko-code/audio.mp3"></audio>
+        <figure>
+          <pre><code>
+&gt; .code
+
+const { openBrowser, goto, 
+        click, closeBrowser } = require('taiko');
+(async () =&gt; {
+    try {
+        await openBrowser();
+        await goto('https://thirstyhead.com/groceryworks');
+        await click('Pasta');
+        await click('Penne');
+        await click('Produce');
+        await click('Eggplant');
+        await click('Purchase');
+    } catch (e) {
+        console.error(e);
+    } finally {
+        await closeBrowser();
+    }
+})();
+          </code></pre>  
+
+
+          <figcaption>
+            <p>
+      While all of this typing in the REPL has been fun, what if you want to run these commands as a part of your test suite or your Continuous Delivery pipeline?       
+            </p>
+            <p>
+If you type '.code', you'll see that the Taiko REPL has bundled everything that you've typed up to this point into modern JavaScript source code that's ready to be run from Node.js. 
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section class="theme-invert" id="23" data-src="slides/taiko-code-2">
+        <h2 hidden="" aria-hidden="false">.code (cont.)</h2>
+        <audio src="slides/taiko-code-2/audio.mp3"></audio>
+        <figure>
+          <h3>Save to file</h3>
+          <pre><code>
+&gt; .code buy-ingredients-for-pasta-dinner.js
+&gt; .exit
+          </code></pre>  
+
+
+          <h3>Run the file</h3>
+          <pre><code>
+$ taiko buy-ingredients-for-pasta-dinner.js
+
+ ✔ Browser opened
+ ✔ Navigated to url "https://thirstyhead.com/groceryworks"
+ ✔ Clicked element matching text "Pasta"
+ ✔ Clicked element matching text "Penne"
+ ✔ Clicked element matching text "Produce"
+ ✔ Clicked element matching text "Eggplant"
+ ✔ Clicked element matching text "Purchase"
+ ✔ Browser closed
+          </code></pre>  
+          <figcaption>
+            <p>
+      Even better, if you type '.code' and a filename, the Taiko REPL will save that source code out to the filesystem in your current working directory.       
+            </p>
+            <p>
+Once you've done that, you can type 'taiko' and the name of your script to see it run anywhere that you have Taiko installed -- your test servers, your Continuous Delivery servers, or even your local development machines.
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- <section data-src="slides/taiko-intercept"></section> -->
+      <!-- <section data-src="slides/taiko-intercept-2"></section> -->
+      <!-- <section data-src="slides/taiko-intercept-3"></section> -->
+      <!-- <section data-src="slides/taiko-intercept-4"></section> -->
+      <!-- <section data-src="slides/gauge"></section> -->
+      <!-- <section data-src="slides/gauge-specs"></section> -->
+      <!-- <section data-src="slides/gauge-impl"></section> -->
+      <!-- <section data-src="slides/gauge-report"></section> -->
+      <!-- <section data-src="slides/taiko-step"></section> -->
+      <section class="section-title" id="24" data-src="slides/conclusion">
+        <h2><span class="highlight">Conclusion</span></h2>
+        <audio src="slides/conclusion/audio.mp3"></audio>
+        <figure>
+          <figcaption>
+            <p>
+              So, what have we learned?
+            </p>
+          </figcaption>
+        </figure>
+      </section>
+      <section id="25" data-src="slides/driver-2">
+        <h2 hidden="" aria-hidden="false">Driver</h2>
+        <audio src="slides/driver-2/audio.mp3"></audio>
+        <figure>
+          <img src="slides/driver-2/driver.jpg" alt="Driver of a car" class="contain" data-src="https://pxhere.com/en/photo/1170413">
+
+          <figcaption>
+            <p>
+      The types of automation features that we're beginning to see baked into modern cars -- like adaptive cruise control and automatic parallel parking -- are similar to the browser automation tools that we're beginning to see baked into modern web browsers.
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="26" data-src="slides/w3c-webdriver-2">
+        <h2 hidden="" aria-hidden="false">W3C WebDriver</h2>
+        <audio src="slides/w3c-webdriver-2/audio.mp3"></audio>
+        <figure>
+          <a href="https://www.w3.org/TR/webdriver1/">
+          <img src="slides/w3c-webdriver-2/w3c-webdriver.png" alt="W3C WebDriver" class="contain" data-src="https://www.w3.org/TR/webdriver1/">
+          </a>
+
+          <figcaption>
+            <p>
+We're on the cusp of an exciting new era of web development -- one where we have full programmatic remote control of our web browsers. For testing purposes. For performance and accessibility analytics. For uses that we haven't even thought of yet.
+            </p>
+          </figcaption>
+        </figure>
+      </section>
+      <section id="27" data-src="slides/taiko-3">
+        <h2 aria-hidden="false"><a href="https://taiko.gauge.org/">https://taiko.gauge.org</a></h2>
+        <audio src="slides/taiko-3/audio.mp3"></audio>
+        <figure>
+          <a href="https://taiko.gauge.org">
+          <img src="slides/taiko-3/taiko-home.png" alt="Taiko Homepage" class="contain-with-header" data-src="https://taiko.gauge.org/">
+          </a>
+
+          <figcaption>
+            <p>
+This is why we're so excited about Taiko -- a free and open source browser automation tool. ThoughtWorkers have been building tools like this for over 15 years now. We want to make sure that you have modern, stable, easy-to-use tools for your developers, for your test suites, and for your Continuous Delivery pipelines. 
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <!-- <section data-src="slides/gauge-2"></section> -->
+      <!-- <section data-src="slides/gauge-specs-2"></section> -->
+      <!-- <section data-src="slides/gauge-impl-2"></section> -->
+      <!-- <section data-src="slides/gauge-report-2"></section> -->
+      <section class="main-title" id="28" data-src="slides/title-2">
+        <h2 hidden="" aria-hidden="false">Introducing Taiko</h2>
+        <audio src="slides/title-2/audio.mp3"></audio>
+        <figure>
+          <div class="banner">
+            Introducing Taiko
+            <div class="subtitle">
+              Driving Your Web Browser Programmatically 
+            </div>
+            <div class="bio">
+              <br>
+              Scott Davis<br>
+              <a href="mailto:scott.davis@thoughtworks.com">scott.davis@thoughtworks.com</a><br>
+              <a href="https://twitter.com/scottdavis99">@scottdavis99</a>
+            </div>
+          </div>
+          <figcaption>
+            <p>
+            I hope that you've enjoyed learning a little bit about Taiko and how to drive your web browser programmatically. Thanks for your time.
+            </p>
+          </figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <script src="js/talk-o-vision.js"></script>
+  
+
+</body></html>
