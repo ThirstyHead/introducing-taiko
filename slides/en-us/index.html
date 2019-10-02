@@ -13,13 +13,13 @@
 
     <style>
       .main-title{
-        background: url('slides/title/taiko-drummer.jpg') no-repeat center center;
+        background: url('slides/title/circular-building.jpg') no-repeat center center;
         background-size: contain;
       }
 
       .banner{
         background-color: var(--theme-foreground-color);
-        opacity: 0.6;
+        opacity: 0.7;
         top: 5vh;
       }
     </style>
@@ -30,13 +30,47 @@
       <section class="main-title" id="1" data-src="slides/title">
         <h2 hidden="" aria-hidden="false">Introducing Taiko</h2>
         <audio src="slides/title/audio.mp3"></audio>
-        <figure>
-          <div class="banner">
+        <style>
+          .custom-figure{
+            display: flex;
+            height: 100%;
+          }
+        
+          .custom-banner{
+            text-align: left;
+            font-size: 2em;
+            font-weight: bold;
+            color: black;
+            background-color: #ccc; 
+            opacity: 0.8;
+            padding-left: 1em;
+            padding-right: 1em;
+            align-self: flex-end;
+            margin-bottom: 1em;
+          }
+
+          .custom-bio{
+            text-align: right;
+            font-size: 0.5em;
+            color: black;
+          }
+
+          .custom-bio a{
+            color: black;
+          }
+
+          .custom-subtitle{
+            font-size: 0.6em;
+            font-style: italic;
+          }
+        </style>
+        <figure class="custom-figure">
+          <div class="custom-banner">
             Introducing Taiko
-            <div class="subtitle">
+            <div class="custom-subtitle">
               Driving Your Web Browser Programmatically 
             </div>
-            <div class="bio">
+            <div class="custom-bio">
               <br>
               Scott Davis<br>
               <a href="mailto:scott.davis@thoughtworks.com">scott.davis@thoughtworks.com</a><br>
@@ -54,23 +88,22 @@
           </figcaption>
         </figure>
       </section>
-      <!-- <section data-src="slides/instructions"></section> -->
-      <section>
+      <section id="2" data-src="slides/instructions">
         <h2 aria-hidden="false">Instructions</h2>
         <audio src="slides/instructions/audio.mp3"></audio>
         <figure>
           <table>
-            <tr>
+            <tbody><tr>
               <th>Keyboard Shortcut</th>
               <th>Description</th>
             </tr>
 
             <tr>
-              <td>&rightarrow; or [space]</td>
+              <td>→ or [space]</td>
               <td>Next slide</td>
             </tr>
             <tr>
-              <td>&leftarrow;</td>
+              <td>←</td>
               <td>Previous slide</td>
             </tr>
             <tr>
@@ -89,12 +122,12 @@
               <td class="highlight">a</td>
               <td><span class="highlight">A</span>uto-play audio and advance to next slide. (toggles on/off)</td>
             </tr>
-          </table>
+          </tbody></table>
 
           <figcaption>
             <p>
               Here are some quick keyboard shortcuts to help you get around.
-              <ul>
+              </p><ul>
                 <li>Press the right arrow or space bar to go to the next slide.</li>
                 <li>Press the left arrow to go to the previous slide.</li>
                 <li>Press 'f' to toggle full screen mode.</li>
@@ -102,14 +135,11 @@
                 <li>Press 'p' to play or pause audio for the current slide.</li>
                 <li>Press 'a' to autoplay audio and advance to the next slide.</li>
               </ul>
-            </p>
+            <p></p>
           </figcaption>
         </figure>
       </section>
-
-
-
-      <section class="theme-invert" id="2" data-src="slides/bio">
+      <section class="theme-invert" id="3" data-src="slides/bio">
         <h2 hidden="" aria-hidden="false">Biography</h2>
         <audio src="slides/bio/audio.mp3"></audio>
         <figure>
@@ -126,7 +156,7 @@
           </figcaption>
         </figure>
       </section>
-      <section id="3" data-src="slides/taiko">
+      <section id="4" data-src="slides/taiko">
         <h2 aria-hidden="false"><a href="https://taiko.gauge.org/">https://taiko.gauge.org</a></h2>
         <audio src="slides/taiko/audio.mp3"></audio>
         <figure>
@@ -142,7 +172,7 @@ Today I'd like to talk to you about Taiko -- a free and open source browser auto
           </figcaption>
         </figure>
       </section>
-      <section id="4" data-src="slides/driver">
+      <section id="5" data-src="slides/driver">
         <h2 hidden="" aria-hidden="false">Driver</h2>
         <audio src="slides/driver/audio.mp3"></audio>
         <figure>
@@ -162,7 +192,7 @@ More advanced cars can parallel park on your behalf, or even be "summonsed" with
           </figcaption>
         </figure>
       </section>
-      <section id="5" data-src="slides/w3c-webdriver">
+      <section id="6" data-src="slides/w3c-webdriver">
         <h2 hidden="" aria-hidden="false">W3C WebDriver</h2>
         <audio src="slides/w3c-webdriver/audio.mp3"></audio>
         <figure>
@@ -189,7 +219,7 @@ And notice the lead editor on this spec: Simon Stewart. As it turns out, Simon i
       <!-- <section data-src="slides/cruisecontrol"></section> -->
       <!-- <section data-src="slides/gocd"></section> -->
       <!-- <section data-src="slides/selenium"></section> -->
-      <section id="6" data-src="slides/selenium-history">
+      <section id="7" data-src="slides/selenium-history">
         <h2 hidden="" aria-hidden="false">Selenium History</h2>
         <audio src="slides/selenium-history/audio.mp3"></audio>
         <figure>
@@ -213,7 +243,7 @@ Simon Stewart released a free and open source tool called "WebDriver" back in 20
         </figure>
       </section>
       <!-- <section data-src="slides/selenium-webdriver"></section> -->
-      <section id="7" data-src="slides/taiko-2">
+      <section id="8" data-src="slides/taiko-2">
         <h2 aria-hidden="false"><a href="https://taiko.gauge.org/">https://taiko.gauge.org</a></h2>
         <audio src="slides/taiko-2/audio.mp3"></audio>
         <figure>
@@ -234,7 +264,7 @@ Where Taiko really shines is stability and ease of use. You're a quick 'npm inst
         </figure>
       </section>
       <!-- <section data-src="slides/chrome-webdriver"></section> -->
-      <section id="8" data-src="slides/chromium">
+      <section id="9" data-src="slides/chromium">
         <h2 aria-hidden="false">Taiko includes Chromium</h2>
         <audio src="slides/chromium/audio.mp3"></audio>
         <figure>
@@ -262,7 +292,7 @@ So while there are still healthy competitors to Chromium in the open source ecos
           </figcaption>
         </figure>
       </section>
-      <section id="9" data-src="slides/chrome-devtools-protocol">
+      <section id="10" data-src="slides/chrome-devtools-protocol">
         <h2 hidden="" aria-hidden="false">Chrome DevTools Protocol</h2>
         <audio src="slides/chrome-devtools-protocol/audio.mp3"></audio>
         <figure>
@@ -284,7 +314,7 @@ Taiko has access to all of the same data and browser automation capabilities tha
         </figure>
       </section>
 
-      <section class="section-title" id="10" data-src="slides/title-using-taiko">
+      <section class="section-title" id="11" data-src="slides/title-using-taiko">
         <h2 aria-hidden="false">Using <span class="highlight">Taiko</span></h2><h2>
           <audio src="slides/title-using-taiko/audio.mp3"></audio>
 
@@ -296,7 +326,7 @@ Taiko has access to all of the same data and browser automation capabilities tha
           </figcaption>
         
       </h2></section>
-      <section id="11" data-src="slides/groceryworks">
+      <section id="12" data-src="slides/groceryworks">
         <h2 hidden="" aria-hidden="false">GroceryWorks</h2>
         <audio src="slides/groceryworks/audio.mp3"></audio>
         <figure>
@@ -312,7 +342,7 @@ Taiko has access to all of the same data and browser automation capabilities tha
           </figcaption>
         </figure>
       </section>
-      <section class="theme-invert" id="12" data-src="slides/taiko-repl">
+      <section class="theme-invert" id="13" data-src="slides/taiko-repl">
         <h2 aria-hidden="false">Taiko REPL</h2>
         <audio src="slides/taiko-repl/audio.mp3"></audio>
         <figure>
@@ -339,7 +369,7 @@ At this point, you are given two suggestions to type. One of these suggestions w
           </figcaption>
         </figure>
       </section>
-      <section class="theme-invert" id="13" data-src="slides/taiko-api">
+      <section class="theme-invert" id="14" data-src="slides/taiko-api">
         <h2 hidden="" aria-hidden="false">Taiko .api</h2>
         <audio src="slides/taiko-api/audio.mp3"></audio>
         <figure>
@@ -375,7 +405,7 @@ But if you want to learn more about any of these specific commands, simply type 
           </figcaption>
         </figure>
       </section>
-      <section class="theme-invert" id="14" data-src="slides/taiko-openbrowser">
+      <section class="theme-invert" id="15" data-src="slides/taiko-openbrowser">
         <h2 hidden="" aria-hidden="false">.api openBrowser</h2>
         <audio src="slides/taiko-openbrowser/audio.mp3"></audio>
         <figure>
@@ -414,7 +444,7 @@ All of these are standard, out-of-the-box, Chromium flags.
           </figcaption>
         </figure>
       </section>
-      <section class="theme-invert" id="15" data-src="slides/taiko-openbrowser-2">
+      <section class="theme-invert" id="16" data-src="slides/taiko-openbrowser-2">
         <h2 hidden="" aria-hidden="false">openBrowser (cont.)</h2>
         <audio src="slides/taiko-openbrowser-2/audio.mp3"></audio>
         <figure>
@@ -436,7 +466,7 @@ All of these are standard, out-of-the-box, Chromium flags.
           </figcaption>
         </figure>
       </section>
-      <section class="theme-invert" id="16" data-src="slides/taiko-goto">
+      <section class="theme-invert" id="17" data-src="slides/taiko-goto">
         <h2 hidden="" aria-hidden="false">.api goto</h2>
         <audio src="slides/taiko-goto/audio.mp3"></audio>
         <figure>
@@ -460,7 +490,7 @@ Example:
           </figcaption>
         </figure>
       </section>
-      <section class="theme-invert" id="17" data-src="slides/taiko-goto-2">
+      <section class="theme-invert" id="18" data-src="slides/taiko-goto-2">
         <h2 hidden="" aria-hidden="false">.api goto</h2>
         <audio src="slides/taiko-goto-2/audio.mp3"></audio>
         <figure>
@@ -483,7 +513,7 @@ Of course, this works just as well visiting 'localhost' on your development mach
           </figcaption>
         </figure>
       </section>
-      <section class="theme-invert" id="18" data-src="slides/taiko-click">
+      <section class="theme-invert" id="19" data-src="slides/taiko-click">
         <h2 hidden="" aria-hidden="false">.api click</h2>
         <audio src="slides/taiko-click/audio.mp3"></audio>
         <figure>
@@ -514,7 +544,7 @@ One of the most powerful features of Taiko is its selector logic. Whatever you (
           </figcaption>
         </figure>
       </section>
-      <section class="theme-invert" id="19" data-src="slides/taiko-click-2">
+      <section class="theme-invert" id="20" data-src="slides/taiko-click-2">
         <h2 hidden="" aria-hidden="false">.api click (cont.)</h2>
         <audio src="slides/taiko-click-2/audio.mp3"></audio>
         <figure>
@@ -537,7 +567,7 @@ You don't have to worry about what the underlying class selector is, or ID selec
           </figcaption>
         </figure>
       </section>
-      <section class="theme-invert" id="20" data-src="slides/taiko-click-3">
+      <section class="theme-invert" id="21" data-src="slides/taiko-click-3">
         <h2 hidden="" aria-hidden="false">.api click (cont.)</h2>
         <audio src="slides/taiko-click-3/audio.mp3"></audio>
         <figure>
@@ -565,7 +595,7 @@ From here, you could type "click('Purchase Order')", or "click('Cancel')" to pro
           </figcaption>
         </figure>
       </section>
-      <section class="theme-invert" id="21" data-src="slides/taiko-selectors">
+      <section class="theme-invert" id="22" data-src="slides/taiko-selectors">
         <h2 hidden="" aria-hidden="false">.api selectors</h2>
         <audio src="slides/taiko-selectors/audio.mp3"></audio>
         <figure>
@@ -602,7 +632,7 @@ But believe it or not, the less specific you can make your Taiko scripts, the mo
           </figcaption>
         </figure>
       </section>
-      <section class="theme-invert" id="22" data-src="slides/taiko-code">
+      <section class="theme-invert" id="23" data-src="slides/taiko-code">
         <h2 hidden="" aria-hidden="false">.code</h2>
         <audio src="slides/taiko-code/audio.mp3"></audio>
         <figure>
@@ -640,7 +670,7 @@ If you type '.code', you'll see that the Taiko REPL has bundled everything that 
           </figcaption>
         </figure>
       </section>
-      <section class="theme-invert" id="23" data-src="slides/taiko-code-2">
+      <section class="theme-invert" id="24" data-src="slides/taiko-code-2">
         <h2 hidden="" aria-hidden="false">.code (cont.)</h2>
         <audio src="slides/taiko-code-2/audio.mp3"></audio>
         <figure>
@@ -685,7 +715,7 @@ Once you've done that, you can type 'taiko' and the name of your script to see i
       <!-- <section data-src="slides/gauge-impl"></section> -->
       <!-- <section data-src="slides/gauge-report"></section> -->
       <!-- <section data-src="slides/taiko-step"></section> -->
-      <section class="section-title" id="24" data-src="slides/conclusion">
+      <section class="section-title" id="25" data-src="slides/conclusion">
         <h2><span class="highlight">Conclusion</span></h2>
         <audio src="slides/conclusion/audio.mp3"></audio>
         <figure>
@@ -696,7 +726,7 @@ Once you've done that, you can type 'taiko' and the name of your script to see i
           </figcaption>
         </figure>
       </section>
-      <section id="25" data-src="slides/driver-2">
+      <section id="26" data-src="slides/driver-2">
         <h2 hidden="" aria-hidden="false">Driver</h2>
         <audio src="slides/driver-2/audio.mp3"></audio>
         <figure>
@@ -710,7 +740,7 @@ Once you've done that, you can type 'taiko' and the name of your script to see i
           </figcaption>
         </figure>
       </section>
-      <section id="26" data-src="slides/w3c-webdriver-2">
+      <section id="27" data-src="slides/w3c-webdriver-2">
         <h2 hidden="" aria-hidden="false">W3C WebDriver</h2>
         <audio src="slides/w3c-webdriver-2/audio.mp3"></audio>
         <figure>
@@ -725,7 +755,7 @@ We're on the cusp of an exciting new era of web development -- one where we have
           </figcaption>
         </figure>
       </section>
-      <section id="27" data-src="slides/taiko-3">
+      <section id="28" data-src="slides/taiko-3">
         <h2 aria-hidden="false"><a href="https://taiko.gauge.org/">https://taiko.gauge.org</a></h2>
         <audio src="slides/taiko-3/audio.mp3"></audio>
         <figure>
@@ -745,16 +775,50 @@ This is why we're so excited about Taiko -- a free and open source browser autom
       <!-- <section data-src="slides/gauge-specs-2"></section> -->
       <!-- <section data-src="slides/gauge-impl-2"></section> -->
       <!-- <section data-src="slides/gauge-report-2"></section> -->
-      <section class="main-title" id="28" data-src="slides/title-2">
+      <section class="main-title" id="29" data-src="slides/title-2">
         <h2 hidden="" aria-hidden="false">Introducing Taiko</h2>
         <audio src="slides/title-2/audio.mp3"></audio>
-        <figure>
-          <div class="banner">
+        <style>
+          .custom-figure{
+            display: flex;
+            height: 100%;
+          }
+        
+          .custom-banner{
+            text-align: left;
+            font-size: 2em;
+            font-weight: bold;
+            color: black;
+            background-color: #ccc; 
+            opacity: 0.8;
+            padding-left: 1em;
+            padding-right: 1em;
+            align-self: flex-end;
+            margin-bottom: 1em;
+          }
+
+          .custom-bio{
+            text-align: right;
+            font-size: 0.5em;
+            color: black;
+          }
+
+          .custom-bio a{
+            color: black;
+          }
+
+          .custom-subtitle{
+            font-size: 0.6em;
+            font-style: italic;
+          }
+        </style>
+        <figure class="custom-figure">
+          <div class="custom-banner">
             Introducing Taiko
-            <div class="subtitle">
+            <div class="custom-subtitle">
               Driving Your Web Browser Programmatically 
             </div>
-            <div class="bio">
+            <div class="custom-bio">
               <br>
               Scott Davis<br>
               <a href="mailto:scott.davis@thoughtworks.com">scott.davis@thoughtworks.com</a><br>
@@ -763,7 +827,11 @@ This is why we're so excited about Taiko -- a free and open source browser autom
           </div>
           <figcaption>
             <p>
-            I hope that you've enjoyed learning a little bit about Taiko and how to drive your web browser programmatically. Thanks for your time.
+              Introducing Taiko, a free and open source browser automation tool for driving your web browser programmatically.  
+            </p>
+            <p>
+              Presented by Scott Davis. His email address is
+              scott.davis@thoughtworks.com. His Twitter handle is @scottdavis99.
             </p>
           </figcaption>
         </figure>
