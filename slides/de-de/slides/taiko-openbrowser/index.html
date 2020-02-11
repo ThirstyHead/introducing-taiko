@@ -1,0 +1,39 @@
+      <section class="theme-invert">
+        <h2 hidden aria-hidden="false">.api openBrowser</h2>
+        <audio src="audio.mp3"></audio>
+        <figure>
+          <pre><code>
+&gt; .api openBrowser
+
+Launches a browser with a tab. The browser will be closed 
+    when the parent node.js process is closed.
+
+Example:
+	openBrowser()
+	openBrowser({ headless: false })
+	openBrowser({args:['--window-size=1440,900']})
+	openBrowser({args: [
+	      '--disable-gpu',
+	      '--disable-dev-shm-usage',
+	      '--disable-setuid-sandbox',
+	      '--no-first-run',
+	      '--no-sandbox',
+	      '--no-zygote']}) - These are recommended args 
+               that have to be passed when running in docker
+          </code></pre>  
+
+
+          <figcaption>
+            <p>
+For example, type '.api openBrowser'. Not surprisingly, this is how you open a new Chromium instance. But there are a number of flags that you can pass to control or customize your new Chromium instance.            
+            </p>
+            <p>
+When you're in the Taiko REPL, typing 'openBrowser' without any options will open a visible instance of Chromium so that you can see what you're doing. But if you're running Taiko as a part of your Continuous Delivery pipeline, you'll almost certainly want to run it in headless mode, which means nothing visible will be displayed. You can also control the size of the window, visible or not, to more closely emulate smartphone, tablet, or laptop users.
+            </p>
+            <p>
+All of these are standard, out-of-the-box, Chromium flags.
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
