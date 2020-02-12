@@ -1,0 +1,39 @@
+      <section class="theme-invert">
+        <h2 hidden aria-hidden="false">.code</h2>
+        <figure>
+          <pre><code>
+&gt; .code
+
+const { openBrowser, goto, 
+        click, closeBrowser } = require('taiko');
+(async () =&gt; {
+    try {
+        await openBrowser();
+        await goto('https://thirstyhead.com/groceryworks');
+        await click('Pasta');
+        await click('Penne');
+        await click('Produce');
+        await click('Eggplant');
+        await click('Purchase');
+    } catch (e) {
+        console.error(e);
+    } finally {
+        await closeBrowser();
+    }
+})();
+          </code></pre>  
+
+
+          <figcaption>
+            <p>
+                Das Testen der Kommandos in der REPL macht Spaß, aber was machst du, wenn du sie als Teil deiner
+                Test Suite in der Continuous Delivery Pipeline ausführen möchtest?
+            </p>
+            <p>
+                Wenn du '.code' eingibst, bündelt die Taiko REPL alles, was du bisher eingegeben hast, in JavaScript
+                Source Code der direkt in Node.js ausgeführt werden kann.
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>

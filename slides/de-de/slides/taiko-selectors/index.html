@@ -1,0 +1,42 @@
+      <section class="theme-invert">
+        <h2 hidden aria-hidden="false">.api selectors</h2>
+        <figure>
+          <pre><code>
+&gt; .api
+
+[snip]
+
+Selectors
+    $, image, link, listItem, button, inputField, 
+    fileField, textField, comboBox, checkBox, 
+    radioButton, text, contains
+
+Proximity selectors
+    toLeftOf, toRightOf, above, below, near
+
+[snip]
+
+Run `.api &lt;name&gt;` for more info on a specific function. 
+    For Example: `.api click`.
+Complete documentation is available at 
+    http://taiko.gauge.org.
+          </code></pre>  
+
+
+          <figcaption>
+            <p>
+                Natürlich kannst du auch spezifischer werden, wenn du möchtest. Du kannst sagen "Klick auf das Bild"
+                oder "Klick den Link" oder "Klick das Element in der Liste". Klick auf das Element "links von",
+                "rechts von", "über" oder "unter". Du kannst das gebräuchlichen "$" verwenden, um Klassen oder IDs
+                zu finden, wenn das die Granularität ist, die du benötigst.
+            </p>
+            <p>
+                Glaub es oder nicht, je unspezifischer du dein Taiko-Skript implementierst, desto robuster ist es
+                gegenüber Änderungen. Wenn sich der Link eines Buttons ändert oder die Checkbox zu einer Combobox wird
+                oder sich der Klassenname mal wieder ändert, wirst du froh sein, dass du den sichtbaren Text statt
+                des Implementierungsdetails verwendet hast.
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>

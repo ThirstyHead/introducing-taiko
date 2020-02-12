@@ -1,0 +1,44 @@
+      <section class="theme-invert">
+        <h2 hidden aria-hidden="false">.api openBrowser</h2>
+        <figure>
+          <pre><code>
+&gt; .api openBrowser
+
+Launches a browser with a tab. The browser will be closed 
+    when the parent node.js process is closed.
+
+Example:
+	openBrowser()
+	openBrowser({ headless: false })
+	openBrowser({args:['--window-size=1440,900']})
+	openBrowser({args: [
+	      '--disable-gpu',
+	      '--disable-dev-shm-usage',
+	      '--disable-setuid-sandbox',
+	      '--no-first-run',
+	      '--no-sandbox',
+	      '--no-zygote']}) - These are recommended args 
+               that have to be passed when running in docker
+          </code></pre>  
+
+
+          <figcaption>
+            <p>
+                Gib zum Beispie '.api openBrowser' ein. Nicht überraschend öffnet dieser Befehl eine neue Instanz von
+                Chromium. Aber es gibt eine Vielzahl von Parametern, die du dem Kommando mitgeben kannst um die
+                Chromium-Instanz zu personalisieren.
+            </p>
+            <p>
+                Wenn du innerhalb der Taiko REPL 'openBrowser' ohne weitere Argumente aufrufst, wird eine sichtbare
+                Chromium-Instanz geöffnet, damit du sehen kannst, was du tust. Wenn du Taiko allerdings innerhalb
+                deiner Continuous Delivery Pipeline aufrufen möchtest, möchtest du vermutlich eine Instanz ohne
+                grafische Oberfläche (headless) verwenden. Auch die Größe des Fensters kann eingestellt werden, um
+                Smartphones, Tablets oder Laptop-User besser emulieren zu können.
+            </p>
+            <p>
+                All das sind standard, out-of-the-box Optionen von Chromium.
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
